@@ -4,7 +4,7 @@ import random
 GAME_WIDTH = 700
 GAME_HEIGHT = 700
 SPEED = 100
-SPACE_SIZE = 50
+SPACE_SIZE = 30
 BODY_PARTS = 3
 SNAKE_COLOR = "#6851d6"
 FOOD_COLOR = "#24c74f"
@@ -102,7 +102,8 @@ def check_collisions(snake):
     return False
 
 def game_over():
-    pass
+    canvas.delete(ALL)
+    canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=('consolas', 70), text="GAME OVER", fill="red", tag="gameover")
 
 window = Tk()
 window.title("Snake Game")
